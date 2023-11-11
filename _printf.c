@@ -24,6 +24,10 @@ int _printf(const char *format, ...)
 		{
 			counter += handelSpecifier(*(format++), args_passed);
 		}
+		else if (*format == '\0')
+		{
+			break;
+		}
 		else
 		{
 			counter += write(1, format, 1);
