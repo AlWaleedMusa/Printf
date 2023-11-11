@@ -23,11 +23,11 @@ int _printf(const char *format, ...)
 		if (*format == '%')
 		{
 			counter += handelSpecifier(*(format++), args_passed);
-		}	
+		}
 		else
 		{
 			counter += write(1, format, 1);
-		}	
+		}
 		format++;
 	}
 	va_end(args_passed);

@@ -7,5 +7,5 @@
 */
 int printfChar(int ch)
 {
-	return _putchar(ch);
+	return (_putchar(ch));
 }
