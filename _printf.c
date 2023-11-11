@@ -23,7 +23,8 @@ int _printf(const char *format, ...)
 		if (*format == '%')
 		{
 			format++;
-			counter += handelSpecifier(*format, args_passed);
+			if (format != NULL)
+				counter += handelSpecifier(*format, args_passed);
 		}
 		else if (*format == '\0')
 		{
