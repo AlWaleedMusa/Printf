@@ -15,13 +15,17 @@ int handelSpecifier(char specifier, va_list args_passed)
 	{
 		counter += printfString(va_arg(args_passed, char *));
 	}
-	if (specifier == 'c')
+	else if (specifier == 'c')
 	{
 		counter += printfChar(va_arg(args_passed, int));
 	}
-	if (specifier == '%')
+	else if (specifier == '%')
 	{
 		counter += write(1, "%", 1);
+	}
+	else
+	{
+		wrire(1, &specifier, 1);
 	}
 	return (counter);
 }
