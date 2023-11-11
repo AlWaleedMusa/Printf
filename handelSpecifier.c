@@ -15,5 +15,9 @@ int handelSpecifier(char specifier, va_list args_passed)
 	{
 		counter += printfString(va_arg(args_passed, char *));
 	}
+	if (specifier == 'c')
+	{
+		counter += printfChar(va_arg(args_passed, int));
+	}
 	return (counter);
 }
