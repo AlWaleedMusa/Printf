@@ -12,6 +12,9 @@ int _printf(const char *format, ...)
 {
 	int counter = 0;
 
+	if (!format)
+		return (-1);
+
 	va_list args_passed; //...
 	va_start(args_passed, format);
 
