@@ -11,27 +11,23 @@
 int _printf(const char *format, ...)
 {
 	int counter = 0;
+	va_list args_passed; /*...*/
 
 	if (!format)
 		return (-1);
 
-	va_list args_passed; //...
 	va_start(args_passed, format);
 
 	while (*format)
 	{
 		if (*format == '%')
 		{
-			counter += handelSpecifier(*(format++), args_passed); // working on this function
-		}
-		else if (*format == '\0')
-		{
-			break;
-		}
+			counter += handelSpecifier(*(format++), args_passed);
+		}	
 		else
 		{
 			counter += write(1, format, 1);
-		}
+		}	
 		format++;
 	}
 	va_end(args_passed);
