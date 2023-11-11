@@ -7,5 +7,5 @@
 */
 int printfString(char *string)
 {
-	return write(1, string, strlen(string));
+	return write(1, string, _strlen(string));
 }
