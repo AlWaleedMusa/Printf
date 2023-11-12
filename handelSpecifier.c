@@ -24,7 +24,8 @@ int handelSpecifier(char specifier, va_list *args_passed)
 	}
 	else if (specifier == '%')
 	{
-		counter += write(1, "%", 1);
+		unsigned char ch = 37;
+		counter += printfChar(ch);
 	}
 	return (counter);
 }
