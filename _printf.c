@@ -30,6 +30,11 @@ int _printf(const char *format, ...)
 		{
 			break;
 		}
+		else if (*format == '/' && *(format + 1) != '\0')
+		{
+			format++;
+			counter += escChar(*format);
+		}
 		else
 		{
 			counter += write(1, format, 1);
