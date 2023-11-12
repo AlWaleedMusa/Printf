@@ -13,15 +13,15 @@ int escChar(const char esc)
 
 	if (esc == 't')
 	{
-		counter += (write(1, "/t", 1));
+		counter += printfString("\\t");
 	}
 	else if (esc == 'n')
 	{
-		counter += (write(1, "/n", 1));
+		counter += printfString("\\n");
 	}
 	else if (esc == 'a')
 	{
-		counter += (write(1, "/a", 1));
+		counter += printfString("\\a");
 	}
 	return (counter);
 }
