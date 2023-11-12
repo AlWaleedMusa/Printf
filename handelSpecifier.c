@@ -13,7 +13,8 @@ int handelSpecifier(char specifier, va_list args_passed)
 
 	if (specifier == 's')
 	{
-		counter += printfString(va_arg(args_passed, char *));
+		char *string = va_arg(args_passed, char *);
+		counter += printfString(string);
 	}
 	else if (specifier == 'c')
 	{
