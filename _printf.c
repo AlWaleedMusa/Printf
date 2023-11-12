@@ -8,6 +8,7 @@
  * @...: args passed to the function.
  * Return: an int.
 */
+
 int _printf(const char *format, ...)
 {
 	int counter = 0;
