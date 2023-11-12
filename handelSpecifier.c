@@ -17,7 +17,8 @@ int handelSpecifier(char specifier, va_list args_passed)
 	}
 	else if (specifier == 'c')
 	{
-		counter += printfChar(va_arg(args_passed, int));
+		char ch = va_arg(args_passed, int);
+		counter += write(1, &ch, 1);
 	}
 	else if (specifier == '%')
 	{
