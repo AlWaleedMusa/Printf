@@ -8,5 +8,9 @@
 
 int printfString(char *string)
 {
+	if (string == NULL)
+	{
+		string = "(null)";
+	}
 	return (write(1, string, _strlen(string)));
 }

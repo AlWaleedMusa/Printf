@@ -8,5 +8,5 @@
 
 int printfChar(int ch)
 {
-	return (_putchar(ch));
+	return (write(1, &ch, 1));
 }
