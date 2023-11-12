@@ -15,22 +15,16 @@ int handelSpecifier(char specifier, va_list *args_passed)
 	if (specifier == 's')
 	{
 		char *string = va_arg(*args_passed, char *);
-
 		counter += printfString(string);
 	}
 	else if (specifier == 'c')
 	{
 		char ch = va_arg(*args_passed, int);
-
 		counter += write(1, &ch, 1);
 	}
 	else if (specifier == '%')
 	{
 		counter += write(1, "%", 1);
-	}
-	else
-	{
-		counter += write(1, &specifier, 1);
 	}
 	return (counter);
 }
