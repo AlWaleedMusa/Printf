@@ -38,7 +38,7 @@ int _printf(const char *format, ...)
 		}
 		else if (*format == '\\')
 		{
-			format ++;
+			format++;
 			counter += escChar(*format);
 		}
 		else

@@ -15,21 +15,21 @@ int handelSpecifier(char specifier, va_list *args_passed)
 	if (specifier == 's')
 	{
 		char *string = va_arg(*args_passed, char *);
+
 		if (!string)
 			return (-1);
-		else
-		{
-			counter += printfString(string);
-		}
+		counter += printfString(string);
 	}
 	else if (specifier == 'c')
 	{
 		unsigned char ch = va_arg(*args_passed, int);
+
 		counter += printfChar(ch);
 	}
 	else if (specifier == '%')
 	{
 		unsigned char ch = 37;
+
 		counter += printfChar(ch);
 	}
 	else if (specifier == '\0')

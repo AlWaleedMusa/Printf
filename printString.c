@@ -11,9 +11,10 @@ int printfString(char *string)
 	int counter = 0;
 
 	char *strCpy = malloc(sizeof(char) * strlen(string));
+
 	strcpy(strCpy, string);
 	counter += (write(1, strCpy, strlen(strCpy)));
 
-	free(strCpy);
+	free (strCpy);
 	return(counter);
 }
