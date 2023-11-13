@@ -12,7 +12,6 @@
 int _printf(const char *format, ...)
 {
 	int counter = 0;
-	int size;
 	va_list args_passed; /*...*/
 
 	if (format == NULL)
