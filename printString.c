@@ -9,8 +9,14 @@
 int printfString(char *string)
 {
 	int counter = 0;
+	char *strCpy;
 
-	char *strCpy = malloc(sizeof(char) * strlen(string));
+	if (string == NULL)
+	{
+		string = "(null)";
+	}
+
+	strCpy = malloc(sizeof(char) * strlen(string));
 
 	strcpy(strCpy, string);
 	counter += (write(1, strCpy, strlen(strCpy)));
