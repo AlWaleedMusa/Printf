@@ -1,18 +1,29 @@
 #include "main.h"
 
 /**
- * 
+ * printINT - a function that handel %d and %i specifiers.
+ * @n: number passed to the function from the handler.
+ * Return: an int (count of numbers printed).
 */
 
-int printINT(int n)
+int printINT(unsigned int n)
 {
-    if (n < 0)
-    {
-        putchar('-');
-        n = -n;
-    }
-    if (n / 10)
-        printINT(n / 10);
-    putchar(n % 10 + '0');
-	return (0);
+    int counter = 1;
+	int i = 0;
+
+	i = n;
+	if (i < 0)
+	{
+		putchar('-');
+		i *= -1;
+		n = i;
+		counter += 1;
+	}
+	while (n > 9)
+	{
+		n /= 10;
+		counter++;
+	}
+	intLooper(i);
+	return (counter);
 }

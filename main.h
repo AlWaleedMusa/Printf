@@ -11,8 +11,8 @@ int handelSpecifier(char specifier, va_list *args_passed);
 int escChar(const char esc);
 int printfString(char *string);
 int printfChar(int ch);
-int _strlen(char *s);
 int _putchar(char c);
-int printINT(int n);
+int printINT(unsigned int n);
+void intLooper(int num);
 
 #endif
