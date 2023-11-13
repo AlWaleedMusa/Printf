@@ -15,7 +15,12 @@ int handelSpecifier(char specifier, va_list *args_passed)
 	if (specifier == 's')
 	{
 		char *string = va_arg(*args_passed, char *);
-		counter += printfString(string);
+		if (!string)
+			return (-1);
+		else
+		{
+			counter += printfString(string);
+		}
 	}
 	else if (specifier == 'c')
 	{
@@ -27,9 +32,9 @@ int handelSpecifier(char specifier, va_list *args_passed)
 		unsigned char ch = 37;
 		counter += printfChar(ch);
 	}
-	else if (specifier == '\0')
+	else
 	{
-		return (0);
+		counter += write(1, &specifier, 1);
 	}
 	return (counter);
 }
