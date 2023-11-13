@@ -30,10 +30,6 @@ int handelSpecifier(char specifier, va_list *args_passed)
 
 		counter += printfChar(ch);
 	}
-	else if (specifier == '\0')
-	{
-		return (0);
-	}
 	else
 	{
 		counter += write(1, "%", 1);
