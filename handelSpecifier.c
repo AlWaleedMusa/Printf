@@ -30,7 +30,7 @@ int handelSpecifier(char specifier, va_list *args_passed)
 
 		counter += printfChar(ch);
 	}
-	else if (specifier == 'd')
+	else if (specifier == 'd' || specifier == 'i')
 	{
 		int num = va_arg(*args_passed, int);
 		printINT(num);
