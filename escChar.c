@@ -2,8 +2,7 @@
 
 /**
  * escChar - handel escape character.
- * @format: char passed from the handling function to check.
- * @args_passed: list of arguments.
+ * @esc: param passed to handel.
  * Return: and int.
 */
 

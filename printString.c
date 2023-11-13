@@ -15,6 +15,6 @@ int printfString(char *string)
 	strcpy(strCpy, string);
 	counter += (write(1, strCpy, strlen(strCpy)));
 
-	free (strCpy);
-	return(counter);
+	free(strCpy);
+	return (counter);
 }
