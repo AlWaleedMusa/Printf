@@ -12,11 +12,19 @@
 int _printf(const char *format, ...)
 {
 	int counter = 0;
+	int size;
 	va_list args_passed; /*...*/
 
 	if (format == NULL)
 		return (-1);
-	else if (format[0] == '%' && format[1] == '\0')
+
+	size = strlen(format);
+	if (size <= 0)
+	{
+		return (-1);
+	}
+
+	if (format[0] == '%' && format[1] == '\0')
 		return (-1);
 
 	va_start(args_passed, format);

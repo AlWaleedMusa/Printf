@@ -12,5 +12,5 @@ int printfString(char *string)
 	{
 		string = "(null)";
 	}
-	return (write(1, string, _strlen(string)));
+	return (write(1, string, strlen(string)));
 }
