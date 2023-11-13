@@ -13,5 +13,6 @@ int printfString(char *string);
 int printfChar(int ch);
 int _strlen(char *s);
 int _putchar(char c);
+int printINT(int n);
 
 #endif
