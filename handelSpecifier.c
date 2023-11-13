@@ -32,9 +32,9 @@ int handelSpecifier(char specifier, va_list *args_passed)
 		unsigned char ch = 37;
 		counter += printfChar(ch);
 	}
-	else
+	else if (specifier == '\0')
 	{
-		counter += write(1, &specifier, 1);
+		return (0);
 	}
 	return (counter);
 }
