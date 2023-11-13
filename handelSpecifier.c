@@ -36,5 +36,10 @@ int handelSpecifier(char specifier, va_list *args_passed)
 	{
 		return (0);
 	}
+	else
+	{
+		counter += write(1, "%", 1);
+		counter += write(1, &specifier, 1);
+	}
 	return (counter);
 }
